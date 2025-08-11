@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import Description from "./components/description/Description";
+import Description from "./components/Description/Description";
 import Options     from "./components/Options/Options";
 import Feedback    from './components/Feedback/Feedback';
 function App() {
