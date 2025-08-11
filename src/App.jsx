@@ -41,17 +41,31 @@ function App() {
       bad : 0
     });
   }
-  
+  const positiveFeedback  = Math.round((feedback.good / (feedback.good + feedback.neutral + feedback.bad)) * 100);
+  const getClassName = (positiveFeedback) => {
+    if (positiveFeedback > 50 && positiveFeedback <= 100) {
+      return 'good';
+    } else if (positiveFeedback === 50) {
+      return 'neutral';
+    } else if (positiveFeedback >= 0 && positiveFeedback < 50) {
+      return 'bad';
+    }
+    return '';
+  };
   return (
     <>
-      <Description />
+      <Description styleClass={getClassName(positiveFeedback)}/>
       <Options 
         onGood = {handleGood}
         onNeutral = {handleNeutral}
         onBad = {handleBad}
         onReset = {handleReset}
       />
-      <Feedback feedback = {feedback}/>
+      <Feedback 
+        feedback = {feedback} 
+        positiveFeedback={positiveFeedback}  
+        styleClass={getClassName(positiveFeedback)}
+      />
     </>
   )
 }

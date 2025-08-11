@@ -1,0 +1,60 @@
+.btnGroup{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.btn{
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background: transparent;
+    transition: all .3s ease;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btnGood{
+    border-color: #27ae60;
+    color : #27ae60;
+    outline: none;
+}
+.btnGood:hover{
+    background: #27ae60;
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
+
+.btnNeutral{
+    border-color: #f39c12;
+    color : #f39c12;
+    outline: none;
+}
+.btnNeutral:hover{
+    background: #f39c12;
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
+
+.btnBad{
+    border-color: #e74c3c;
+    color : #e74c3c;
+    outline: none;
+}
+.btnBad:hover{
+    background: #e74c3c;
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
+
+.btnReset{
+    border-color: #3498db;
+    color : #3498db;
+    outline: none;
+}
+.btnReset:hover{
+    background: #3498db;
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
